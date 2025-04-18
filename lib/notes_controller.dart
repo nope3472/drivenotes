@@ -92,48 +92,35 @@ class NotesController extends AsyncNotifier<List<NoteModel>> {
   }
 
   Future<void> delete(String id) async {
-    debugPrint('NotesController: Starting delete operation for note $id');
+    debugPrint('NotesController: Deleting note $id');
     state = const AsyncValue.loading();
     try {
       // Get the note first to check if it's synced
       final note = state.value?.firstWhere((n) => n.id == id);
-      debugPrint(
-        'NotesController: Found note - ID: ${note?.id}, Title: ${note?.title}, IsSynced: ${note?.isSynced}, FileId: ${note?.fileId}',
-      );
 
       // Delete from Drive if the note is synced and has a fileId
       if (note?.isSynced == true && note?.fileId != null) {
         try {
           final driveId = note!.fileId!;
-          debugPrint(
-            'NotesController: Attempting to delete from Drive - ID: $driveId',
-          );
+          debugPrint('NotesController: Deleting from Drive - ID: $driveId');
           await DriveService.instance.deleteNote(driveId);
-          debugPrint('NotesController: Successfully deleted from Drive');
+          debugPrint('NotesController: Deleted from Drive successfully');
         } catch (e) {
           debugPrint('NotesController: Error deleting from Drive - $e');
           // Continue with local deletion even if Drive fails
         }
-      } else {
-        debugPrint(
-          'NotesController: Note is not synced or has no fileId, skipping Drive deletion',
-        );
       }
 
       // Always delete locally
       debugPrint('NotesController: Deleting from local DB - ID: $id');
       await LocalDatabase.instance.deleteNote(id);
-      debugPrint('NotesController: Successfully deleted from local DB');
+      debugPrint('NotesController: Deleted from local DB successfully');
 
       // Get fresh list of notes after deletion
       final updatedNotes = await LocalDatabase.instance.getAllNotes();
-      debugPrint(
-        'NotesController: Updated notes list has ${updatedNotes.length} notes',
-      );
       state = AsyncValue.data(updatedNotes);
     } catch (e, st) {
-      debugPrint('NotesController: Error in delete operation - $e');
-      debugPrint('NotesController: Stack trace: $st');
+      debugPrint('NotesController: Error deleting note - $e');
       state = AsyncValue.error(e, st);
     }
   }

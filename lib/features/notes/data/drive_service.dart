@@ -135,15 +135,13 @@ class DriveService {
   }
 
   Future<void> deleteNote(String fileId) async {
-    debugPrint('DriveService: Starting delete operation for file $fileId');
+    debugPrint('DriveService: Deleting file $fileId');
     await _ensureAuthenticated();
     try {
-      debugPrint('DriveService: Attempting to delete file $fileId from Drive');
       await _driveApi.files.delete(fileId);
-      debugPrint('DriveService: Successfully deleted file $fileId from Drive');
-    } catch (e, stackTrace) {
+      debugPrint('DriveService: Successfully deleted file $fileId');
+    } catch (e) {
       debugPrint('DriveService: Error deleting file $fileId - $e');
-      debugPrint('DriveService: Stack trace: $stackTrace');
       rethrow;
     }
   }

@@ -42,6 +42,7 @@ class NoteModel with _$NoteModel {
       content: content,
       createdAt: DateTime.now(),
       updatedAt: DateTime.now(),
+      fileId: id,  
       isSynced: true,
     );
   }
