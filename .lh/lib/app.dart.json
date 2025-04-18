@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/app.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1744893142851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744893153798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n       home: const LoginPage(),\r\n       debugShowCheckedModeBanner: false,\r\n     );\r\n   }\r\n-} \n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1744893301633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,10 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n       title: 'Firebase Auth App',\r\n-      theme: ThemeData(\r\n-        primarySwatch: Colors.blue,\r\n-        useMaterial3: true,\r\n-      ),\r\n-      home: const LoginPage(),\r\n+      theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),\r\n+      home: const LoginScreen(),\r\n       debugShowCheckedModeBanner: false,\r\n     );\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1744896165308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   Widget build(BuildContext context) {\r\n     return MaterialApp(\r\n       title: 'Firebase Auth App',\r\n       theme: ThemeData(primarySwatch: Colors.blue, useMaterial3: true),\r\n-      home: const LoginScreen(),\r\n+      home: const LoginPage(),\r\n       debugShowCheckedModeBanner: false,\r\n     );\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1744893142851,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'login.dart';\r\n\r\nclass MyApp extends StatelessWidget {\r\n  const MyApp({super.key});\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return MaterialApp(\r\n      title: 'Firebase Auth App',\r\n      theme: ThemeData(\r\n        primarySwatch: Colors.blue,\r\n        useMaterial3: true,\r\n      ),\r\n      home: const LoginPage(),\r\n      debugShowCheckedModeBanner: false,\r\n    );\r\n  }\r\n} "
+        }
+    ]
+}

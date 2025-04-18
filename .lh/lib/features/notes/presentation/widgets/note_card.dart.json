@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/features/notes/presentation/widgets/note_card.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744893784371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744893784370,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:drivenotes/features/notes/data/models/note_model.dart';\r\n\r\nclass NoteCard extends StatelessWidget {\r\n  final NoteModel note;\r\n  final VoidCallback onTap;\r\n  final VoidCallback onLongPress;\r\n\r\n  const NoteCard({\r\n    super.key,\r\n    required this.note,\r\n    required this.onTap,\r\n    required this.onLongPress,\r\n  });\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Card(\r\n      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),\r\n      child: ListTile(\r\n        title: Text(note.title),\r\n        subtitle: Text(\r\n          'Last modified: ${note.lastModified.toString().split('.').first}',\r\n          style: Theme.of(context).textTheme.bodySmall,\r\n        ),\r\n        trailing: note.isSynced\r\n            ? const Icon(Icons.cloud_done, color: Colors.green)\r\n            : const Icon(Icons.cloud_off, color: Colors.orange),\r\n        onTap: onTap,\r\n        onLongPress: onLongPress,\r\n      ),\r\n    );\r\n  }\r\n} "
+        }
+    ]
+}

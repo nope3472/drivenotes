@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "93768373598",
+    "project_id": "drivenotes-a16c7",
+    "storage_bucket": "drivenotes-a16c7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93768373598:android:637fa8ce3dd8a82b6f2bcf",
+        "android_client_info": {
+          "package_name": "com.example.drivenotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93768373598-fc05juot5bg3kftj1tuot2lf96u3hi1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.drivenotes",
+            "certificate_hash": "ca1349b1c4fb7563ead0e3cd4791e484a7a168e2"
+          }
+        },
+        {
+          "client_id": "93768373598-nk16p2dbhgev829q3oudikvnarhgsrpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5A6X8hwqRFMJgMSqBz2_UP-P8iYfuZQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93768373598-nk16p2dbhgev829q3oudikvnarhgsrpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

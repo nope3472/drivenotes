@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/features/notes/domain/services/folder_service.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744969862926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744969862926,
+            "name": "Commit-0",
+            "content": "import 'package:googleapis/drive/v3.dart' as drive;\r\n\r\nclass FolderService {\r\n  final drive.DriveApi _driveApi;\r\n  static const String folderName = 'DriveNotes';\r\n\r\n  FolderService(this._driveApi);\r\n\r\n  Future<String> getOrCreateFolder() async {\r\n    // First try to find the folder\r\n    final response = await _driveApi.files.list(\r\n      q: \"name='$folderName' and mimeType='application/vnd.google-apps.folder' and trashed=false\",\r\n    );\r\n\r\n    if (response.files?.isNotEmpty ?? false) {\r\n      return response.files!.first.id!;\r\n    }\r\n\r\n    // If not found, create it\r\n    final folder = drive.File()\r\n      ..name = folderName\r\n      ..mimeType = 'application/vnd.google-apps.folder';\r\n\r\n    final createdFolder = await _driveApi.files.create(folder);\r\n    return createdFolder.id!;\r\n  }\r\n} "
+        }
+    ]
+}

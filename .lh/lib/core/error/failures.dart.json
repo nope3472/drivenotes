@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/core/error/failures.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744895543386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744895543386,
+            "name": "Commit-0",
+            "content": "import 'package:equatable/equatable.dart';\r\n\r\nabstract class Failure extends Equatable {\r\n  final String message;\r\n  \r\n  const Failure({required this.message});\r\n  \r\n  @override\r\n  List<Object> get props => [message];\r\n}\r\n\r\nclass ServerFailure extends Failure {\r\n  const ServerFailure({required String message}) : super(message: message);\r\n}\r\n\r\nclass CacheFailure extends Failure {\r\n  const CacheFailure({required String message}) : super(message: message);\r\n}\r\n\r\nclass NetworkFailure extends Failure {\r\n  const NetworkFailure({required String message}) : super(message: message);\r\n}\r\n\r\nclass AuthFailure extends Failure {\r\n  const AuthFailure({required String message}) : super(message: message);\r\n} "
+        }
+    ]
+}

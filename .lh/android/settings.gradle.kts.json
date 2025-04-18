@@ -1,0 +1,26 @@
+{
+    "sourceFile": "android/settings.gradle.kts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1744892801347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744892907672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n }\r\n \r\n plugins {\r\n     id(\"dev.flutter.flutter-plugin-loader\") version \"1.0.0\"\r\n-    id(\"com.android.application\") version \"8.2.0\" apply false\r\n+    id(\"com.android.application\") version \"8.2.1\" apply false\r\n     id(\"org.jetbrains.kotlin.android\") version \"1.9.22\" apply false\r\n }\r\n \r\n include(\":app\")\r\n"
+                },
+                {
+                    "date": 1744893006186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,25 @@\n-pluginManagement {\r\n-    val flutterSdkPath = run {\r\n-        val properties = java.util.Properties()\r\n-        file(\"local.properties\").inputStream().use { properties.load(it) }\r\n-        val flutterSdkPath = properties.getProperty(\"flutter.sdk\")\r\n-        require(flutterSdkPath != null) { \"flutter.sdk not set in local.properties\" }\r\n-        flutterSdkPath\r\n-    }\r\n-\r\n-    includeBuild(\"$flutterSdkPath/packages/flutter_tools/gradle\")\r\n-\r\n-    repositories {\r\n-        google()\r\n-        mavenCentral()\r\n-        gradlePluginPortal()\r\n-    }\r\n-}\r\n-\r\n-plugins {\r\n-    id(\"dev.flutter.flutter-plugin-loader\") version \"1.0.0\"\r\n-    id(\"com.android.application\") version \"8.2.1\" apply false\r\n-    id(\"org.jetbrains.kotlin.android\") version \"1.9.22\" apply false\r\n-}\r\n-\r\n-include(\":app\")\r\n+pluginManagement {\n+    val flutterSdkPath = run {\n+        val properties = java.util.Properties()\n+        file(\"local.properties\").inputStream().use { properties.load(it) }\n+        val flutterSdkPath = properties.getProperty(\"flutter.sdk\")\n+        require(flutterSdkPath != null) { \"flutter.sdk not set in local.properties\" }\n+        flutterSdkPath\n+    }\n+\n+    includeBuild(\"$flutterSdkPath/packages/flutter_tools/gradle\")\n+\n+    repositories {\n+        google()\n+        mavenCentral()\n+        gradlePluginPortal()\n+    }\n+}\n+\n+plugins {\n+    id(\"dev.flutter.flutter-plugin-loader\") version \"1.0.0\"\n+    id(\"com.android.application\") version \"8.7.0\" apply false\n+    id(\"org.jetbrains.kotlin.android\") version \"1.8.22\" apply false\n+}\n+\n+include(\":app\")\n"
+                }
+            ],
+            "date": 1744892801347,
+            "name": "Commit-0",
+            "content": "pluginManagement {\r\n    val flutterSdkPath = run {\r\n        val properties = java.util.Properties()\r\n        file(\"local.properties\").inputStream().use { properties.load(it) }\r\n        val flutterSdkPath = properties.getProperty(\"flutter.sdk\")\r\n        require(flutterSdkPath != null) { \"flutter.sdk not set in local.properties\" }\r\n        flutterSdkPath\r\n    }\r\n\r\n    includeBuild(\"$flutterSdkPath/packages/flutter_tools/gradle\")\r\n\r\n    repositories {\r\n        google()\r\n        mavenCentral()\r\n        gradlePluginPortal()\r\n    }\r\n}\r\n\r\nplugins {\r\n    id(\"dev.flutter.flutter-plugin-loader\") version \"1.0.0\"\r\n    id(\"com.android.application\") version \"8.2.0\" apply false\r\n    id(\"org.jetbrains.kotlin.android\") version \"1.9.22\" apply false\r\n}\r\n\r\ninclude(\":app\")\r\n"
+        }
+    ]
+}

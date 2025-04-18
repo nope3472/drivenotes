@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/features/notes/data/models/note_model.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1744893742067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744893885398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n   }) = _NoteModel;\r\n \r\n   factory NoteModel.fromJson(Map<String, dynamic> json) =>\r\n       _$NoteModelFromJson(json);\r\n-} \n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1744893965312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,7 @@\n   }) = _NoteModel;\r\n \r\n   factory NoteModel.fromJson(Map<String, dynamic> json) =>\r\n       _$NoteModelFromJson(json);\r\n+\r\n+  Future<void> copyWith({required String content, required DateTime lastModified}) {}\r\n }\r\n"
+                },
+                {
+                    "date": 1744893995870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,5 @@\n   }) = _NoteModel;\r\n \r\n   factory NoteModel.fromJson(Map<String, dynamic> json) =>\r\n       _$NoteModelFromJson(json);\r\n-\r\n-  Future<void> copyWith({required String content, required DateTime lastModified}) {}\r\n }\r\n"
+                },
+                {
+                    "date": 1744894086530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,6 @@\n import 'package:freezed_annotation/freezed_annotation.dart';\r\n \r\n-part 'note_model.freezed.dart';\r\n-part 'note_model.g.dart';\r\n \r\n @freezed\r\n class NoteModel with _$NoteModel {\r\n   const factory NoteModel({\r\n"
+                },
+                {
+                    "date": 1744894093478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import 'package:freezed_annotation/freezed_annotation.dart';\r\n \r\n+part 'note_model.freezed.dart';\r\n+part 'note_model.g.dart';\r\n \r\n @freezed\r\n class NoteModel with _$NoteModel {\r\n   const factory NoteModel({\r\n"
+                }
+            ],
+            "date": 1744893742067,
+            "name": "Commit-0",
+            "content": "import 'package:freezed_annotation/freezed_annotation.dart';\r\n\r\npart 'note_model.freezed.dart';\r\npart 'note_model.g.dart';\r\n\r\n@freezed\r\nclass NoteModel with _$NoteModel {\r\n  const factory NoteModel({\r\n    required String id,\r\n    required String title,\r\n    required String content,\r\n    required DateTime lastModified,\r\n    @Default(false) bool isSynced,\r\n  }) = _NoteModel;\r\n\r\n  factory NoteModel.fromJson(Map<String, dynamic> json) =>\r\n      _$NoteModelFromJson(json);\r\n} "
+        }
+    ]
+}

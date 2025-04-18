@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/features/notes/presentation/providers/drive_service_provider.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1744893887579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744894012907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,18 @@\n import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n import 'package:googleapis_auth/auth_io.dart';\r\n import 'package:drivenotes/features/notes/data/services/drive_service.dart';\r\n-import 'package:drivenotes/core/constants/app_constants.dart';\r\n+import 'package:drivenotes/features/auth/data/services/auth_service.dart';\r\n \r\n-final driveServiceProvider = Provider<DriveService>((ref) {\r\n-  throw UnimplementedError('DriveService not initialized');\r\n+final authServiceProvider = Provider<AuthService>((ref) {\r\n+  return AuthService();\r\n });\r\n \r\n final authClientProvider = FutureProvider<AutoRefreshingAuthClient>((ref) async {\r\n-  // TODO: Implement proper OAuth2 authentication\r\n-  // This is a placeholder - you'll need to implement the actual OAuth2 flow\r\n-  throw UnimplementedError('OAuth2 authentication not implemented');\r\n+  final authService = ref.watch(authServiceProvider);\r\n+  return authService.signIn();\r\n });\r\n\\ No newline at end of file\n \r\n final initializedDriveServiceProvider = FutureProvider<DriveService>((ref) async {\r\n   final authClient = await ref.watch(authClientProvider.future);\r\n   return DriveService.create(authClient);\r\n-}); \n+});\r\n"
+                },
+                {
+                    "date": 1744894459919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,13 @@\n final authServiceProvider = Provider<AuthService>((ref) {\r\n   return AuthService();\r\n });\r\n \r\n-final authClientProvider = FutureProvider<AutoRefreshingAuthClient>((ref) async {\r\n+final authClientProvider = FutureProvider<AuthClient>((ref) async {\r\n   final authService = ref.watch(authServiceProvider);\r\n   return authService.signIn();\r\n });\r\n \r\n final initializedDriveServiceProvider = FutureProvider<DriveService>((ref) async {\r\n   final authClient = await ref.watch(authClientProvider.future);\r\n   return DriveService.create(authClient);\r\n\\ No newline at end of file\n-});\n+});\r\n"
+                },
+                {
+                    "date": 1744917598940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,1 @@\n-import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n-import 'package:googleapis_auth/auth_io.dart';\r\n-import 'package:drivenotes/features/notes/data/services/drive_service.dart';\r\n-import 'package:drivenotes/features/auth/data/services/auth_service.dart';\r\n \r\n-final authServiceProvider = Provider<AuthService>((ref) {\r\n-  return AuthService();\r\n-});\r\n-\r\n-final authClientProvider = FutureProvider<AuthClient>((ref) async {\r\n-  final authService = ref.watch(authServiceProvider);\r\n-  return authService.signIn();\r\n-});\r\n-\r\n-final initializedDriveServiceProvider = FutureProvider<DriveService>((ref) async {\r\n-  final authClient = await ref.watch(authClientProvider.future);\r\n-  return DriveService.create(authClient);\r\n-});\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1744893887579,
+            "name": "Commit-0",
+            "content": "import 'package:flutter_riverpod/flutter_riverpod.dart';\r\nimport 'package:googleapis_auth/auth_io.dart';\r\nimport 'package:drivenotes/features/notes/data/services/drive_service.dart';\r\nimport 'package:drivenotes/core/constants/app_constants.dart';\r\n\r\nfinal driveServiceProvider = Provider<DriveService>((ref) {\r\n  throw UnimplementedError('DriveService not initialized');\r\n});\r\n\r\nfinal authClientProvider = FutureProvider<AutoRefreshingAuthClient>((ref) async {\r\n  // TODO: Implement proper OAuth2 authentication\r\n  // This is a placeholder - you'll need to implement the actual OAuth2 flow\r\n  throw UnimplementedError('OAuth2 authentication not implemented');\r\n});\r\n\r\nfinal initializedDriveServiceProvider = FutureProvider<DriveService>((ref) async {\r\n  final authClient = await ref.watch(authClientProvider.future);\r\n  return DriveService.create(authClient);\r\n}); "
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/app_router",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744897554169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744897554169,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:go_router/go_router.dart';\r\nimport '../login_page.dart';\r\nimport '../register_page.dart';\r\nimport '../features/notes/presentation/notes_list_page.dart';\r\nimport '../features/notes/presentation/note_editor_page.dart';\r\n\r\nclass AppRouter {\r\n  static final router = GoRouter(\r\n    initialLocation: '/',\r\n    routes: [\r\n      GoRoute(path: '/', builder: (_, __) => const LoginPage()),\r\n      GoRoute(path: '/register', builder: (_, __) => const RegisterPage()),\r\n      GoRoute(path: '/notes', builder: (_, __) => const NotesListPage()),\r\n      GoRoute(path: '/notes/edit',\r\n          builder: (ctx, state) {\r\n            final note = state.extra as dynamic /* NoteModel? */;\r\n            return NoteEditorPage(originalNote: note);\r\n          }\r\n      ),\r\n    ],\r\n  );\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/note_editor_controller",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744897661638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744897661638,
+            "name": "Commit-0",
+            "content": "import 'package:flutter_riverpod/flutter_riverpod.dart';\r\nimport '../../data/note_model.dart';\r\nimport '../../../core/services/drive_service.dart';\r\n\r\nfinal noteEditorControllerProvider = AsyncNotifierProviderFamily<\r\n    NoteEditorController, void, NoteModel?>(NoteEditorController.new);\r\n\r\nclass NoteEditorController extends AsyncNotifier<void> {\r\n  final NoteModel? original;\r\n  NoteEditorController(this.original);\r\n\r\n  @override\r\n  Future<void> build() async {\r\n    // nothing to preload\r\n  }\r\n\r\n  Future<void> save(String title, String content) async {\r\n    state = const AsyncValue.loading();\r\n    try {\r\n      if (original == null) {\r\n        await DriveService.instance.createNote(title, content);\r\n      } else {\r\n        await DriveService.instance.updateNote(\r\n          fileId: original!.id,\r\n          newTitle: title,\r\n          newContent: content,\r\n        );\r\n      }\r\n      state = const AsyncValue.data(null);\r\n    } catch (e, st) {\r\n      state = AsyncValue.error(e, st);\r\n    }\r\n  }\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/features/notes/domain/repositories/notes_repository.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744895537236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744895537236,
+            "name": "Commit-0",
+            "content": "import 'package:dartz/dartz.dart';\r\nimport 'package:drivenotes/core/error/failures.dart';\r\nimport 'package:drivenotes/features/notes/domain/entities/note.dart';\r\n\r\nabstract class NotesRepository {\r\n  Future<Either<Failure, List<Note>>> getNotes();\r\n  Future<Either<Failure, Note>> getNote(String id);\r\n  Future<Either<Failure, Note>> createNote(Note note);\r\n  Future<Either<Failure, Note>> updateNote(Note note);\r\n  Future<Either<Failure, void>> deleteNote(String id);\r\n} "
+        }
+    ]
+}

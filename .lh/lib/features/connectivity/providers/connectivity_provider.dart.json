@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/features/connectivity/providers/connectivity_provider.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744971897096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744971897096,
+            "name": "Commit-0",
+            "content": "import 'dart:async';\r\nimport 'package:flutter_riverpod/flutter_riverpod.dart';\r\nimport 'package:connectivity_plus/connectivity_plus.dart';\r\n\r\nfinal connectivityProvider = StateNotifierProvider<ConnectivityNotifier, bool>(\r\n  (ref) => ConnectivityNotifier(),\r\n);\r\n\r\nclass ConnectivityNotifier extends StateNotifier<bool> {\r\n  ConnectivityNotifier() : super(false) {\r\n    _init();\r\n  }\r\n\r\n  StreamSubscription<ConnectivityResult>? _subscription;\r\n\r\n  void _init() {\r\n    _checkConnectivity();\r\n    _subscription = Connectivity().onConnectivityChanged.listen((result) {\r\n      state = result == ConnectivityResult.none;\r\n    });\r\n  }\r\n\r\n  Future<void> _checkConnectivity() async {\r\n    final result = await Connectivity().checkConnectivity();\r\n    state = result == ConnectivityResult.none;\r\n  }\r\n\r\n  @override\r\n  void dispose() {\r\n    _subscription?.cancel();\r\n    super.dispose();\r\n  }\r\n} "
+        }
+    ]
+}

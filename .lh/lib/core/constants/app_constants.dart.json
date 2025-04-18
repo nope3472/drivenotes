@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/core/constants/app_constants.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744893734405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744893734405,
+            "name": "Commit-0",
+            "content": "class AppConstants {\r\n  static const String driveNotesFolderName = 'DriveNotes';\r\n  static const String appName = 'DriveNotes';\r\n  \r\n  // Google Drive API scopes\r\n  static const List<String> driveScopes = [\r\n    'https://www.googleapis.com/auth/drive.file',\r\n    'https://www.googleapis.com/auth/drive.appdata',\r\n  ];\r\n} "
+        }
+    ]
+}

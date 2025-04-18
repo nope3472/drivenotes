@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/features/notes/presentation/providers/note_save_provider.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744915838468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744915838468,
+            "name": "Commit-0",
+            "content": "import 'package:flutter_riverpod/flutter_riverpod.dart';\r\n\r\nfinal noteSaveProvider = StateProvider<NoteSaveState>((ref) => const NoteSaveState());\r\n\r\nclass NoteSaveState {\r\n  final bool isSaving;\r\n  final String? message;\r\n  final bool isError;\r\n\r\n  const NoteSaveState({\r\n    this.isSaving = false,\r\n    this.message,\r\n    this.isError = false,\r\n  });\r\n\r\n  NoteSaveState copyWith({\r\n    bool? isSaving,\r\n    String? message,\r\n    bool? isError,\r\n  }) {\r\n    return NoteSaveState(\r\n      isSaving: isSaving ?? this.isSaving,\r\n      message: message ?? this.message,\r\n      isError: isError ?? this.isError,\r\n    );\r\n  }\r\n} "
+        }
+    ]
+}

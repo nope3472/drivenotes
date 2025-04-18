@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/assets/google_logo.png",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744913323084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744913323084,
+            "name": "Commit-0",
+            "content": "iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAADe0lEQVRIx7VWTUhjVxT+3ntvkpeYGI0/0YkzVhF/ULCKiIhF3AkiXbkQdDELQXHlxkWXXbgQBEEQBMFNQcxCEMS6EsW6EDEgDIUZO2Ps1GlqjPnvz0t877wbmxYyzmgz9MCB+3jv3O+e75zvnkfwD+PKlSuC4ziX+/r6PqhUKoTjOFQqFVSrVTQaDZTLZeRyOaRSKcRiMWxsbKBer/8tTvwdw+XLl4d6e3s/dblcwtDQEGw2G/R6PVQqFWQyGYrFIg4PD7G7u4toNIrNzU3EYrGPt7a2vvtbhBcvXhwZGBj4wufzCcPDw7DZbNDr9ZDJZBAEAZIkgTGGer2OfD6PVCqFaDSKtbU1rK+vY3t7+/729vY3/0l4/vz5EafT+cXo6KgwMjICh8MBg8EAhUIBlUoFQRAgCAIopaBpolaroVQqIZPJYG9vD6urq1hZWcHOzs793d3dbztJT58+PeJ2u7+8cOGCMDY2Bo/HA7PZDLVaDZlMBrlcDqlD2ixijKFSqSCfzyMej2N5eRnLy8vY29u7n0gkvj1GeObMmRGn0/nl+fPnhfHxcXg8HlgsFmg0GiiVSiiVypZEkiSBUgpKKer1OkqlEnK5HBKJBJaWlrC4uIj9/f37yWTy2xbh8PDwSH9//1eTk5PC5OQk3G43zGYztFotVCoVlEolFAoF5HI5CCHgOA4cx4FSCsYYGGOo1+sol8vI5/M4ODjA/Pw85ufnkUwm76dSqQcA8ODBA4fNZvvm7NmzwtTUFLxeL6xWK3Q6HdRqNdRqNVQqFZRKJeRyOXieB8dxEAQBPM+DEAJCCBhjqFarKBaLSKfT2NzcxNzcHGKx2HQ6nX4oB4DBwcHp8fFxYXp6Gl6vFzabDXq9HhqNBlqtFhqNBmq1GkqlEgqFAnK5HDzPQxAE8DwPnufB8zwopajVaigUCkgmk1hYWMDc3BwSicR0JpN5KAPA6dOnp30+n3Dz5k14vV7Y7XYYjUbo9XrodDrodDpotVpoNBqo1WqoVCoolUooFArwPA+e58HzPARBgCAIqNfrKBaLSKVSWFxcxOzsLA4ODqaz2exDGQCcOHFi2uPxCLdu3YLP54PD4YDJZILBYIBer4dOp4NWq4VGo4FarYZKpYJSqYRCoQDP8xAEAYIggBACxhgqlQry+TwODw/x7NkzPH/+HMlkcjqXyz1s9eH/8QN/AsCqU5SVv4NcAAAAAElFTkSuQmCC "
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "lib/features/notes/domain/entities/note.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1744895531070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1744895531070,
+            "name": "Commit-0",
+            "content": "import 'package:freezed_annotation/freezed_annotation.dart';\r\n\r\npart 'note.freezed.dart';\r\npart 'note.g.dart';\r\n\r\n@freezed\r\nclass Note with _$Note {\r\n  const factory Note({\r\n    required String id,\r\n    required String title,\r\n    required String content,\r\n    @JsonKey(name: 'created_at') required DateTime createdAt,\r\n    @JsonKey(name: 'updated_at') required DateTime updatedAt,\r\n  }) = _Note;\r\n\r\n  factory Note.fromJson(Map<String, dynamic> json) => _$NoteFromJson(json);\r\n} "
+        }
+    ]
+}

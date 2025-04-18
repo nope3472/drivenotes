@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/app_router.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1744897720363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1744897727030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import 'package:drivenotes/login.dart';\r\n+import 'package:flutter/material.dart';\r\n+import 'package:go_router/go_router.dart';\r\n+\r\n+import '../register_page.dart';\r\n+\r\n+\r\n+class AppRouter {\r\n+  static final router = GoRouter(\r\n+    initialLocation: '/',\r\n+    routes: [\r\n+      GoRoute(path: '/', builder: (_, __) => const LoginPage()),\r\n+      GoRoute(path: '/register', builder: (_, __) => const RegisterPage()),\r\n+      GoRoute(path: '/notes', builder: (_, __) => const NotesListPage()),\r\n+      GoRoute(path: '/notes/edit',\r\n+          builder: (ctx, state) {\r\n+            final note = state.extra as dynamic /* NoteModel? */;\r\n+            return NoteEditorPage(originalNote: note);\r\n+          }\r\n+      ),\r\n+    ],\r\n+  );\r\n+}\r\n"
+                },
+                {
+                    "date": 1744897733625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import 'package:drivenotes/login.dart';\r\n+import 'package:drivenotes/note_editor_page.dart';\r\n+import 'package:drivenotes/notes_list_page.dart';\r\n import 'package:flutter/material.dart';\r\n import 'package:go_router/go_router.dart';\r\n \r\n import '../register_page.dart';\r\n@@ -20,26 +22,4 @@\n       ),\r\n     ],\r\n   );\r\n }\r\n-import 'package:flutter/material.dart';\r\n-import 'package:go_router/go_router.dart';\r\n-import '../login_page.dart';\r\n-import '../register_page.dart';\r\n-\r\n-\r\n-class AppRouter {\r\n-  static final router = GoRouter(\r\n-    initialLocation: '/',\r\n-    routes: [\r\n-      GoRoute(path: '/', builder: (_, __) => const LoginPage()),\r\n-      GoRoute(path: '/register', builder: (_, __) => const RegisterPage()),\r\n-      GoRoute(path: '/notes', builder: (_, __) => const NotesListPage()),\r\n-      GoRoute(path: '/notes/edit',\r\n-          builder: (ctx, state) {\r\n-            final note = state.extra as dynamic /* NoteModel? */;\r\n-            return NoteEditorPage(originalNote: note);\r\n-          }\r\n-      ),\r\n-    ],\r\n-  );\r\n-}\r\n"
+                },
+                {
+                    "date": 1744897857607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import 'package:drivenotes/login.dart';\r\n import 'package:drivenotes/note_editor_page.dart';\r\n import 'package:drivenotes/notes_list_page.dart';\r\n-import 'package:flutter/material.dart';\r\n+\r\n import 'package:go_router/go_router.dart';\r\n \r\n import '../register_page.dart';\r\n \r\n"
+                },
+                {
+                    "date": 1744913900542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,11 @@\n import 'package:drivenotes/login.dart';\r\n import 'package:drivenotes/note_editor_page.dart';\r\n import 'package:drivenotes/notes_list_page.dart';\r\n-\r\n import 'package:go_router/go_router.dart';\r\n \r\n-import '../register_page.dart';\r\n+import '../register_page.dart';\\\r\n \r\n-\r\n class AppRouter {\r\n   static final router = GoRouter(\r\n     initialLocation: '/',\r\n     routes: [\r\n"
+                },
+                {
+                    "date": 1744913906974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n   static final router = GoRouter(\r\n     initialLocation: '/',\r\n     routes: [\r\n       GoRoute(path: '/', builder: (_, __) => const LoginPage()),\r\n-      GoRoute(path: '/register', builder: (_, __) => const RegisterPage()),\r\n       GoRoute(path: '/notes', builder: (_, __) => const NotesListPage()),\r\n       GoRoute(path: '/notes/edit',\r\n           builder: (ctx, state) {\r\n             final note = state.extra as dynamic /* NoteModel? */;\r\n"
+                },
+                {
+                    "date": 1744914033705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n import 'package:drivenotes/note_editor_page.dart';\r\n import 'package:drivenotes/notes_list_page.dart';\r\n import 'package:go_router/go_router.dart';\r\n \r\n-import '../register_page.dart';\\\r\n \r\n class AppRouter {\r\n   static final router = GoRouter(\r\n     initialLocation: '/',\r\n"
+                }
+            ],
+            "date": 1744897720363,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:go_router/go_router.dart';\r\nimport '../login_page.dart';\r\nimport '../register_page.dart';\r\n\r\n\r\nclass AppRouter {\r\n  static final router = GoRouter(\r\n    initialLocation: '/',\r\n    routes: [\r\n      GoRoute(path: '/', builder: (_, __) => const LoginPage()),\r\n      GoRoute(path: '/register', builder: (_, __) => const RegisterPage()),\r\n      GoRoute(path: '/notes', builder: (_, __) => const NotesListPage()),\r\n      GoRoute(path: '/notes/edit',\r\n          builder: (ctx, state) {\r\n            final note = state.extra as dynamic /* NoteModel? */;\r\n            return NoteEditorPage(originalNote: note);\r\n          }\r\n      ),\r\n    ],\r\n  );\r\n}\r\n"
+        }
+    ]
+}
